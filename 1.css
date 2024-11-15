@@ -1,0 +1,341 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Basic Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+h1, h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  /* Hover Effect for Nav Links */
+  .home:hover, .quiz:hover, .about:hover, .contact:hover {
+    padding: 5px;
+    background-color: #fcf26c;
+    color: rgb(255, 0, 43);
+  }
+
+  
+/* sign in */
+  .sign{ padding: 5px;
+    background-color: rgb(255, 0, 21);
+  }
+/* hover on sign button*/
+  .sign:hover{ 
+     padding: 3px;
+    color: inherit;
+    text-decoration: none;
+    cursor :pointer;
+    background-color: #b420b4;
+    color: aqua;
+
+  }
+  /* Navbar Styles */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #111111;
+    color: white;
+    position: relative;
+  }
+  nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 182, 47);
+  }
+  
+  nav .nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end; /* Align the links to the right */
+    margin-left: auto; /* Push the menu to the right */
+  }
+  
+  nav .nav-links li {
+    margin-left: 20px;
+  }
+  
+  nav .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  /* Hamburger Menu */
+  nav .hamburger {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+  }
+  
+  /* Hide the checkbox */
+  .menu-toggle {
+    display: none; /* This hides the checkbox */
+  }
+  
+  /* Hide the menu by default on small screens */
+  nav .nav-links {
+    display: flex;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    /* Hide the menu links on small screens */
+    nav .nav-links {
+      display: none; /* Hidden by default */
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background-color: #a201ff;
+      position: absolute;
+      top: 50px;
+      right: 0; /* Position the menu on the right side */
+      left: 28px;
+      padding: 20px 0;
+      box-shadow: -2px 0 20px rgba(130, 240, 6, 0.5); /* Optional shadow effect */
+      position:relative; 
+       z-index:1 ;}
+  
+    nav .nav-links li {
+      margin: 10px 0;
+    }
+  
+            /* Show the hamburger icon */
+    nav .hamburger {
+      display: block; 
+    }
+  
+           /* Toggle the visibility of the menu when the checkbox is checked */
+    #menu-toggle:checked + .hamburger + .nav-links {
+      display: flex; 
+    }
+  }
+  
+  
+  
+   /* Section Styles */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+/* Content layout */
+.content {
+  margin-top: 20px;
+  
+}
+
+/* Row layout */
+.row {
+  display: flex;  
+  align-items: center;  
+  justify-content: center; 
+  margin-bottom: 20px; 
+  gap: 20px; 
+}
+
+/* Text styling */
+.text {
+  flex: 1;  
+  padding: 20px;
+  text-align: left;  
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  
+}
+
+/* Image box styling */
+.image {
+  width: 30%; 
+  padding: 20px;
+  display: flex;
+  justify-content: center;  
+  align-items: center; 
+  box-shadow: -2px 0 20px rgba(128, 6, 243, 0.5); 
+  border-radius: 20px;
+}
+
+/* Image styling */
+.image img {
+  width: 100%;  
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;  
+}
+
+
+ 
+  
+  /* Parallax Effect */
+  section {
+    background: url(./forest\ imgpng) center center/cover;
+    position: relative;
+    background-attachment:scroll;
+  }
+  
+  /* Animation Effects */
+  .reveal {
+    opacity: 0;
+    transform: translateY(300px);
+    animation: revealAnimation 3s forwards;
+  }
+  
+  .fade-left {
+    opacity: 500px;
+    transform: translateX(-30px);
+    animation: fadeInLeft 1s forwards;
+  }
+  
+  .fade-right {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: fadeInRight 1s forwards;
+  }
+  /* aniamtion on different view*/
+  @keyframes revealAnimation {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }}
+    .button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: -2px 0 30px rgba(9, 240, 124, 0.5);
+
+    }
+    
+    .button:hover {
+      background-color: #1139ec;
+    }
+  
+ 
+  
+  /* Parallax Effect */
+  section {
+    background: url('image') center center/cover;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  /* Animation Effects */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: revealAnimation 1s forwards;
+  }
+  
+  .fade-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 1s forwards;
+  }
+  
+  .fade-right {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: fadeInRight 1s forwards;
+  }
+  
+  @keyframes revealAnimation {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Form Styles */
+  .table{ padding: 20px;
+     border-style: solid;
+     box-shadow: 0 4px  8px 0 rgba(165, 9, 236, 0.2),0 6px 20px 0 rgba(189, 29, 181, 0.6);
+     background-color: #e6dbe6;
+  }
+ 
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  form input, form textarea, form button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    background-color: #333;
+    color: white;
+    border: none;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    nav .nav-links {
+      display: none;
+    }
+  
+    nav .hamburger {
+      display: block;
+    }
+  
+    .nav-links.active {
+      display: block;
+    }}  
